@@ -57,8 +57,6 @@ button:focus {
 }
 
 .main-header {
-    position: relative;
-    /* z-index: 2; */
     background: url(../img/top-background.png) no-repeat top center;
 }
 
@@ -107,7 +105,7 @@ button:focus {
 
 .main-header .main-menu {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     background-color: rgba(64, 145, 208, 0.7);
 }
 
@@ -138,13 +136,25 @@ button:focus {
 
 #banner-carousel {
     position: relative;
+    overflow: hidden;
     top: -265px;
     text-align: center;
+}
+
+#banner-carousel .item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    width: 1054px;
+    height: 344px;
+    background: url(../img/banner-carousel-shadow.png) no-repeat center center;
 }
 
 #banner-carousel .text,
 #banner-carousel .link-wrap {
     position: relative;
+    z-index: 2;
     top: 300px;
     left: 135px;
     text-align: left;
