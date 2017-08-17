@@ -24,6 +24,7 @@
 
 body {
     font-family: MyriadProRegular, "Helvetica Neue", Helvetica, Roboto, Arial sans-serif;
+    overflow: hidden;
 }
 
 button:hover,
@@ -56,8 +57,18 @@ button:focus {
     }
 }
 
-.main-header {
-    background: url(../img/top-background.png) no-repeat top center;
+.main-header:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1943px;
+    height: 92px;
+    background: url(
+    ../img/top-background.png) no-repeat top center;
 }
 
 .main-header .top-box {
